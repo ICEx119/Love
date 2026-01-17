@@ -1,0 +1,105 @@
+<html>
+<head>
+    
+    <title>คบรึยัง คบได้แล้วมั้งงง💕</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            animation: pop 1s ease;
+        }
+
+        @keyframes pop {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+
+        h1 {
+            color: #ff4b6e;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 15px;
+            margin: 15px 0;
+        }
+
+        button {
+           padding: 14px 28px;
+           font-size: 18px;
+           font-family: 'Segoe UI', sans-serif;
+           border-radius: 50px;
+           border: none;
+           cursor: pointer;
+           transition: all 0.3s ease;
+           box-shadow: 0 8px 20px rgba(255, 75, 110, 0.35);
+        }
+
+        #yes {
+           background: linear-gradient(135deg, #ff5f9e, #ff85b3);
+           color: white;
+        }
+
+        #yes:hover {
+           transform: translateY(-3px) scale(1.05);
+           box-shadow: 0 12px 25px rgba(255, 75, 110, 0.5);
+        }
+
+        #no {
+           background: linear-gradient(135deg, #ffd6e8, #ffc1d9);
+           color: #ff4b6e;
+           position: absolute;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1> คบกะเค้ามั้ยย 💖</h1>
+    <p>ใจอ่อนแล้วน๊าา 🥺</p>
+
+    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
+
+    <br><br>
+    <button id="yes" onclick="goNext()">คบ ❤️</button>
+    <button id="no" onmouseover="moveButton()">ไม่อ่ะ 🙈</button>
+</div>
+
+<script>
+    function goNext() {
+        window.location.href ="index2.html";
+    }
+
+    function moveButton() {
+        const btn = document.getElementById("no");
+        const x = Math.random() * (window.innerWidth - 100);
+        const y = Math.random() * (window.innerHeight - 50);
+        btn.style.left = x + "px";
+        btn.style.top = y + "px";
+    }
+</script>
+
+</body>
+</html>
